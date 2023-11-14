@@ -27,10 +27,12 @@
 
 .correct {
   background-color: #28a745;
+  border: none;
 }
 
 .incorrect {
   background-color: #dc3545;
+  border: none;
 }
 
 /* HUD */
@@ -41,10 +43,22 @@
 }
 
 .hud-prefix {
-  text-align: center;
   font-size: 2rem;
 }
 
 .hud-main-text {
-  text-align: center;
+  text-align: right;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #e4b7a0;
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  height: 3.4rem;
+  background-color: #e4b7a0;
+  width: 0%;
 }
