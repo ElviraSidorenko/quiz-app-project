@@ -13,6 +13,13 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 let questions = [];
+
+function decodeString(str) {
+  const textArea = document.createElement("textarea");
+  textArea.innerHTML = str;
+  return textArea.value;
+}
+
 fetch(
   "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple"
 )
@@ -23,7 +30,7 @@ fetch(
     console.log(loadedQuestions);
     questions = loadedQuestions.results.map((loadedQuestion) => {
       const formattedQuestion = {
-        question: loadedQuestion.question,
+        question: decodeString(loadedQuestion.question),
       };
 
       const answerChoices = [...loadedQuestion.incorrect_answers];
@@ -34,7 +41,7 @@ fetch(
         loadedQuestion.correct_answer
       );
       answerChoices.forEach((choice, index) => {
-        formattedQuestion["choice" + (index + 1)] = choice;
+        formattedQuestion["choice" + (index + 1)] = decodeString(choice);
       });
       return formattedQuestion;
     });
