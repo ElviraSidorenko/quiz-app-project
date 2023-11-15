@@ -14,7 +14,3 @@
   text-decoration: none; /* remove underline */
   color: #e4b7a0;
 }
-
-.high-score:hover {
-  transform: scale(1.025);
-}
