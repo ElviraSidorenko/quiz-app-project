@@ -1,5 +1,7 @@
 # Simple Quiz App
 
+![Screenshot of the app](/Screenshot.png)
+
 This project is a simple quiz application coded in vanilla JavaScript and styled with basic CSS. The app allows users to test their general knowledge with a set of questions fetched from the Open Trivia DB API.
 
 ## Features
